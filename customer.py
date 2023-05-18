@@ -1,23 +1,20 @@
 class Customer:
     shop = "Groci_store"
-    def __init__(self,name, email, transaction,loyalty_points):
+    def __init__(self,name, email, order):
         self.name = name
+        self.order = order
         self.email = email
-        self.transaction = transaction
-        self.loyalty_points = loyalty_points
         self.cart = []
     
-    def add_to_cart(self,item):
-        self.cart.append(item)
-        print(f"{self.cart}")
-    def remove_from_cart(self,item):
-        if item in self.cart:
-            self.cart.remove(item)
-        print(f"{self.cart}")
-    def get_transaction(self):
-        print (f"Trasaction, {self.name}  {self.transaction} {self.email}")
-    def add_points(self):
-        print(f"Thank you for shopping with Groci store, you have received {self.loyalty_points}")
+  
+    def place_order(self, order):
+        self.orders.append(order)
+        print("Order placed successfully!")
         
-
+    def cancel_order(self, order):
+        if order in self.orders:
+            self.orders.remove(order)
+            print("Order cancelled successfully!")
+        else:
+            print("Order not found.")
 
