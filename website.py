@@ -10,7 +10,7 @@ class Website:
     #displays the number of new customers visiting the website
     def update_customers(self, count): 
         self.customers += count 
-        print(f"{self.visitors} are the number of new customers who visited our website") 
+        print(f"{self.customers} are the number of new customers who visited our website") 
     
 
 
