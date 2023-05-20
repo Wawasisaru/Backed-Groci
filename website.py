@@ -1,25 +1,18 @@
-class Website:
-    def __init__(self, name, url):
-        self.name = name
-        self.url = url
+class Website: 
+    def __init__(self, products, customers):
+            self.products = products
+            self.customers = 0 
+    #displays information on products offered on the website   
+    def display_info(self): 
+       print(f"We offer {self.products} of various varieties") 
+       
+    
+    #displays the number of new customers visiting the website
+    def update_customers(self, count): 
+        self.customers += count 
+        print(f"{self.customers} are the number of new customers who visited our website") 
+    
 
-        #this method returns the name of the website
-    def get_name(self):
-        return f"{self.name}"
-    
-        #this method returns the url of the website|
-    def get_url(self):
-        return f"{self.url}"
-    
-        #this method takes a new url as input
-    def set_url(self, new_url):
-        self.url = new_url
-        return f"{self.url}"
-    
-        #prints the name of the url of the website
-    def print_details(self):
-        print(f"{self.name}")
-        print(f"{self.url}")
 
 
 
