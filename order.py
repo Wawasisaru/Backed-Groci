@@ -1,15 +1,16 @@
 class Order:
     # Attributes
-    def __init__(self, order_id, customer_name):
+    def __init__(self, order_id, customer_name,discount_percentage):
         self.order_id = order_id
         self.customer_name = customer_name
         self.items = []
+        self.discount_percentage = discount_percentage
     
 
     def calculate_total(self):
         total = 0
         for item in self.items:
-            total += item.price
+            total += item
         return total
     def remove_item(self, item):
         if item in self.items:

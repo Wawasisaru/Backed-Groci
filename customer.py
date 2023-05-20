@@ -8,13 +8,13 @@ class Customer:
     
   
     def place_order(self, order):
-        self.orders.append(order)
-        print("Order placed successfully!")
+        self.order.append(order)
+        print(f"Order placed successfully!")
         
     def cancel_order(self, order):
         if order in self.orders:
             self.orders.remove(order)
-            print("Order cancelled successfully!")
+            print(f"Order cancelled successfully!")
         else:
-            print("Order not found.")
+            print(f"Order not found.")
 
